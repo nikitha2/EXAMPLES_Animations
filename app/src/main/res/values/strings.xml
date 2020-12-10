@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EXAMPLES_Animations</string>
+    <string name="detailsActivity">This is the details Activity</string>
+    <string name="swipe_from_below">Details screen will swipe from below</string>
+    <string name="show_details">Show Details</string>
+    <string name="details">Details</string>
+
+</resources>

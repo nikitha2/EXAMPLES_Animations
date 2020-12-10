@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="Theme.EXAMPLES_Animations.Home">
+    <item name="android:windowExitTransition">@transition/grid_exit_transition </item>   // exit transition to define how views leave the screen
+    <item name="android:windowContentTransitions">true</item>
+
+</style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#3f51b5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#00bcd4</item>
+        <item name="android:windowExitTransition">@transition/grid_exit_transition </item>   // exit transition to define how views leave the screen
+        <item name="android:windowReenterTransition">@transition/grid_reenter_transition </item>
+    </style>
+</resources>
