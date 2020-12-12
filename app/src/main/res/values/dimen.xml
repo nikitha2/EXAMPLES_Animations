@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">8dp</dimen>
+    <dimen name="margin1">16dp</dimen>
+    <dimen name="margin2">4dp</dimen>
     <dimen name="gridItemHeight">100dp</dimen>
 
+    <dimen name="textsize_button">10sp</dimen>
+    <dimen name="textsize_button1">8sp</dimen>
 </resources>

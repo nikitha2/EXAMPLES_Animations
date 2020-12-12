@@ -1,8 +1,37 @@
 <resources>
     <string name="app_name">EXAMPLES_Animations</string>
     <string name="detailsActivity">This is the details Activity</string>
-    <string name="swipe_from_below">Details screen will swipe from below</string>
+    <string name="drawbaleOrRevealHide">Drawbale and Reveal/Hide Anim</string>
     <string name="show_details">Show Details</string>
-    <string name="details">Details</string>
+    <string name="animate_drawaable_title">Animate drawable graphics Using </string>
+    <string name="AnimationDrawable">AnimationDrawable</string>
+    <string name="AnimatedVectorDrawable">AnimatedVectorDrawable</string>
+
+    <string name="RevealOrhide">Reveal or hide a view using animation</string>
+    <string name="circulaReveal">circular reveal</string>
+    <string name="crossfade">click to see crossfade</string>
+    <string name="cardflip">CLICK ON THE CARD BELOW TO SEE CARD FLIP ANIM</string>
+    <string name="crossfadeText">Crossfade animations (also known as dissolve) gradually fade out one View or ViewGroup while simultaneously fading in another. This animation is useful for situations where you want to switch content or views in your app. The crossfade animation shown here uses ViewPropertyAnimator, which is available for Android 3.1 (API level 12) and higher.</string>
+    <string name="circulaRevealText">Reveal animations provide users visual continuity when you show or hide a group of UI elements. The ViewAnimationUtils.createCircularReveal() method enables you to animate a clipping circle to reveal or hide a view. This animation is provided in the ViewAnimationUtils class, which is available for Android 5.0 (API level 21) and higher.</string>
+    <string name="cardflipText"></string>
+    <string name="card_back_title">Card Back Side</string>
+    <string name="card_back_description">In order to create the card flip animation, you need a total of four animators. Two animators for when the front of the card animates out and to the left and in and from the left. You also need two animators for when the back of the card animates in and from the right and out and to the right.</string>
+    <string name="description_image_1">Card Flip Animation</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Reveal">Reveal</string>
+    <string name="RevealTitle">click Reveal or Hide</string>
+    <string name="Hide">Hide</string>
+    <string name="MoveViewWithAnimation">Move a View with Animation</string>
+    <string name="MoveViewsUsingFlingAnimation">Move views using fling animation</string>
+
+    <string name="moveViewWithFlingAnimation">Move views using a fling animation</string>
+    <string name="enlargeViewWithZoomAnimation">Enlarge a view using a zoom animation</string>
+    <string name="animateMovementWithSpringAnimation">Animate movement using spring physics</string>
+    <string name="ChangeViewPositionWithObjectAnimator">Change the view position with ObjectAnimator</string>
+    <string name="ChangeViewPositionCurvedWithPathInterpolator">Change the view position (curved motion) with PathInterpolator</string>
+    <string name="curverMotion">click to see image move in curved motion</string>
+    <string name="straightMotionBtn">click to see image move in straight motion</string>
+
 
 </resources>

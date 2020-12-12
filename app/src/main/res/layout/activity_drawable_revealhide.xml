@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent" android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowAllowEnterTransitionOverlap="true"
+    tools:context=".DrawableOrRevealHideActivity">
+
+    <TextView
+        android:id="@+id/drawableGraphics"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/animate_drawaable_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/drawableGraphics1"/>
+
+    <TextView
+        android:id="@+id/drawableGraphics1"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Panel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top"
+        android:text="@string/AnimationDrawable"
+        android:textSize="@dimen/textsize_button"
+        app:layout_constraintBottom_toTopOf="@id/animationVectorDrawableImage"
+        app:layout_constraintRight_toLeftOf="@id/drawableGraphics2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawableGraphics"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <TextView
+        android:id="@+id/drawableGraphics2"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Panel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal|top"
+        android:textSize="@dimen/textsize_button"
+        android:text="@string/AnimatedVectorDrawable"
+        app:layout_constraintBottom_toTopOf="@id/animationVectorDrawableImage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintLeft_toRightOf="@id/drawableGraphics1"
+        app:layout_constraintTop_toBottomOf="@+id/drawableGraphics"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/animationDrawableImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/revealOrHide"
+        app:layout_constraintEnd_toStartOf="@+id/animationVectorDrawableImage"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawableGraphics1"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/animationVectorDrawableImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/revealOrHide"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintLeft_toRightOf="@id/animationDrawableImage"
+        app:layout_constraintTop_toBottomOf="@id/drawableGraphics1"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/avd_check__to_close_animation" />
+
+    <TextView
+        android:id="@+id/revealOrHide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin1"
+        android:gravity="center"
+        android:text="@string/RevealOrhide"
+        style="@style/MaterialAlertDialog.MaterialComponents.Title.Text"
+        app:layout_constraintBottom_toTopOf="@+id/circularRevealTitle_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animationVectorDrawableImage" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/circularRevealTitle_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/text_circularReveal_contentainer"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintRight_toLeftOf="@id/crossfadeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/revealOrHide"
+        app:layout_constraintWidth_percent="0.33">
+
+        <TextView
+            android:id="@+id/text_circularReveal_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:text="@string/RevealTitle"
+            android:textSize="@dimen/textsize_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/RevealBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/Reveal"
+            android:textSize="@dimen/textsize_button1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_circularReveal_title"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintRight_toLeftOf="@id/HideBtn"/>
+
+        <Button
+            android:id="@+id/HideBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:text="@string/Hide"
+            android:textSize="@dimen/textsize_button1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.8"
+            app:layout_constraintTop_toBottomOf="@id/text_circularReveal_title"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintLeft_toRightOf="@id/RevealBtn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <Button
+        android:id="@+id/crossfadeButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="@dimen/textsize_button"
+        android:gravity="center"
+        android:text="@string/crossfade"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/text_crossfade_contentainer"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toEndOf="@+id/circularRevealTitle_container"
+        app:layout_constraintTop_toBottomOf="@+id/revealOrHide"
+        app:layout_constraintWidth_percent="0.33" />
+
+    <TextView
+        android:id="@+id/cardflipTitle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/cardflip"
+        android:textSize="@dimen/textsize_button"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/cardflip_fragment_contentainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintStart_toEndOf="@+id/crossfadeButton"
+        app:layout_constraintTop_toBottomOf="@+id/revealOrHide"
+        app:layout_constraintWidth_percent="0.33" />
+
+       <TextView
+         android:id="@+id/text_circularReveal_contentainer"
+         android:layout_width="0dp"
+         android:layout_height="0dp"
+         android:gravity="center_horizontal"
+         android:text="@string/circulaRevealText"
+         app:layout_constraintBottom_toBottomOf="parent"
+         app:layout_constraintHeight_percent="0.5"
+         app:layout_constraintRight_toLeftOf="@id/text_crossfade_contentainer"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@id/circularRevealTitle_container"
+         app:layout_constraintWidth_percent="0.33"
+         android:textStyle="normal"
+         android:textAlignment="textStart"
+         tools:ignore="RtlCompat"
+         android:layout_margin="@dimen/margin"
+         android:lineSpacingMultiplier="1.2"
+         android:visibility="invisible"/>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/text_crossfade_contentainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintRight_toLeftOf="@id/cardflip_fragment_contentainer"
+        app:layout_constraintTop_toBottomOf="@+id/crossfadeButton"
+        app:layout_constraintLeft_toRightOf="@id/text_circularReveal_contentainer"
+        app:layout_constraintWidth_percent="0.33">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/content_crossfade"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView style="?android:textAppearanceSmall"
+                android:id="@+id/text_crossfade"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/crossfadeText"
+                android:textAlignment="textStart"
+                tools:ignore="RtlCompat"
+                android:textStyle="normal"
+                android:layout_margin="@dimen/margin"/>
+
+        </ScrollView>
+
+        <ProgressBar android:id="@+id/loading_spinner_crossfade"
+            style="?android:progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardflip_fragment_contentainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintLeft_toRightOf="@id/text_crossfade_contentainer"
+        app:layout_constraintTop_toBottomOf="@+id/cardflipTitle"
+        app:layout_constraintWidth_percent="0.33"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

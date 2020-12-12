@@ -15,12 +15,12 @@ package com.example.examples_animations;
 
         import static com.example.examples_animations.NetworkUtils.buildImageURL;
 
-public class GridAdapter extends RecyclerView.Adapter {
+public class ImagesListAdapter extends RecyclerView.Adapter {
     List<Grid_ListItem> grid_listItems;
     Context context;
     ListItemClickListener mClickListener;
 
-    public GridAdapter(Context context, List<Grid_ListItem> grid_listItems, ListItemClickListener mClickListener) {
+    public ImagesListAdapter(Context context, List<Grid_ListItem> grid_listItems, ListItemClickListener mClickListener) {
         this.grid_listItems =grid_listItems;
         this.context=context;
         this.mClickListener=mClickListener;

@@ -9,15 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EXAMPLES_Animations">
-        <activity android:name=".MainActivity"/>
-
-
+        <activity android:name=".MoveViewsUsingFlingAnimationActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
-            android:name=".DetailsActivity"
-            android:parentActivityName=".GridActivity" />
-
-
-        <activity android:name=".GridActivity">
+            android:name=".MoveViewWithAnimationActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DrawableOrRevealHideActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

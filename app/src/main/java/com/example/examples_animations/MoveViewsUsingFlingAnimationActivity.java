@@ -1,39 +1,62 @@
 package com.example.examples_animations;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.dynamicanimation.animation.DynamicAnimation;
+import androidx.dynamicanimation.animation.FlingAnimation;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.GridView;
-import android.widget.ListAdapter;
+import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewConfiguration;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class GridActivity extends AppCompatActivity implements GridAdapter.ListItemClickListener {
-    GridAdapter gridAdapter;
+public class MoveViewsUsingFlingAnimationActivity extends AppCompatActivity implements ImagesListAdapter.ListItemClickListener {
+    RecyclerView listOfImages;
     List<Grid_ListItem> listOfImageUrls;
-
+    Context mContext=this;
+    float maxFlingVelocity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_grid);
+        setContentView(R.layout.activity_move_views_using_fling_animation);
 
-        RecyclerView gridView=findViewById(R.id.grid_details);
-        gridView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
+        setTitle(getResources().getText(R.string.MoveViewsUsingFlingAnimation));
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        listOfImages=findViewById(R.id.MoveViewsUsingFlingAnimationView);
+        listOfImages.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         createList();
-        gridView.setHasFixedSize(true);
-        gridAdapter = new GridAdapter(this, listOfImageUrls, this);
-        gridView.setAdapter(gridAdapter);
+        listOfImages.setHasFixedSize(true);
+        ImagesListAdapter gridAdapter = new ImagesListAdapter(this, listOfImageUrls, this);
+        listOfImages.setAdapter(gridAdapter);
 
+        FlingAnimation fling = new FlingAnimation(listOfImages, DynamicAnimation.SCROLL_X);
+        listOfImages.setOnFlingListener(new RecyclerView.OnFlingListener() {
+            @Override
+            public boolean onFling(int velocityX, int velocityY) {
+                fling.setStartVelocity(-velocityX)
+                        .setMinValue(0)
+                        .setMaxValue(2000)
+                        .setFriction(1.1f)
+                        .start();
+                if(velocityX!=0)
+                    return true;
+                return false;
+            }
+        });
 
+       // GestureDetector.OnGestureListener(new)
     }
 
     private void createList() {
@@ -58,8 +81,6 @@ public class GridActivity extends AppCompatActivity implements GridAdapter.ListI
 
     @Override
     public void onListItemClick(int position) {
-        Intent intent=new Intent(this,DetailsActivity.class);
-        Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
-        startActivity(intent,bundle);
+
     }
 }
