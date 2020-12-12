@@ -32,6 +32,7 @@
     <string name="ChangeViewPositionCurvedWithPathInterpolator">Change the view position (curved motion) with PathInterpolator</string>
     <string name="curverMotion">click to see image move in curved motion</string>
     <string name="straightMotionBtn">click to see image move in straight motion</string>
+    <string name="description_zoom_touch_close">zoom image</string>
 
 
 </resources>
