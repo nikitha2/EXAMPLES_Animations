@@ -75,14 +75,18 @@ public class MainActivity extends AppCompatActivity   {
         enlargeViewWithZoomAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(v.getContext(), EnlargeViewWithZoomAnimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);
             }
         });
 
         animateMovementWithSpringAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent=new Intent(v.getContext(), AnimateMovementWithSpringAnimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);
             }
         });
     }
