@@ -40,4 +40,8 @@
     <string name="plus">plus</string>
     <string name="text">Click to see text animate</string>
     <string name="textForAnim">Text to show auto Animation on textView</string>
+    <string name="SlideBetweenFragmentsUsingViewPager">Slide between fragments using ViewPager</string>
+    <string name="SlideBetweenFragmentsUsingViewPager2">Slide between fragments using ViewPager2</string>
+
+
 </resources>

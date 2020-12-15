@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity   {
     Button AnimateLayoutChangesUsingTransition;
     Button Createcustomtransitionanimation;
     Button StartActivityUsingAnimation;
+    Button SlideBetweenFragmentsUsingViewPager;
+    Button SlideBetweenFragmentsUsingViewPager2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity   {
         AnimateLayoutChangesUsingTransition=findViewById(R.id.AnimateLayoutChangesUsingTransition);
         Createcustomtransitionanimation=findViewById(R.id.Createcustomtransitionanimation);
         StartActivityUsingAnimation=findViewById(R.id.StartActivityUsingAnimation);
+        SlideBetweenFragmentsUsingViewPager=findViewById(R.id.StartActivityUsingAnimation);
+        SlideBetweenFragmentsUsingViewPager2=findViewById(R.id.StartActivityUsingAnimation);
 
     }
 
@@ -119,6 +123,24 @@ public class MainActivity extends AppCompatActivity   {
         });
 
         StartActivityUsingAnimation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);*/
+            }
+        });
+
+        SlideBetweenFragmentsUsingViewPager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);*/
+            }
+        });
+
+        SlideBetweenFragmentsUsingViewPager2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);

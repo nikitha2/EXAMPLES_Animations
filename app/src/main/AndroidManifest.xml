@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EXAMPLES_Animations">
-        <activity android:name=".AutoAnimateLayoutUpdatesActivity"
-            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".AnimateLayoutChangesUsingTransitionActivity"></activity>
+        <activity
+            android:name=".AutoAnimateLayoutUpdatesActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AnimateMovementWithSpringAnimationActivity"
             android:parentActivityName=".MainActivity" />
