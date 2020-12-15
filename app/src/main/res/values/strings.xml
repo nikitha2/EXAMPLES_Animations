@@ -13,7 +13,7 @@
     <string name="cardflip">CLICK ON THE CARD BELOW TO SEE CARD FLIP ANIM</string>
     <string name="crossfadeText">Crossfade animations (also known as dissolve) gradually fade out one View or ViewGroup while simultaneously fading in another. This animation is useful for situations where you want to switch content or views in your app. The crossfade animation shown here uses ViewPropertyAnimator, which is available for Android 3.1 (API level 12) and higher.</string>
     <string name="circulaRevealText">Reveal animations provide users visual continuity when you show or hide a group of UI elements. The ViewAnimationUtils.createCircularReveal() method enables you to animate a clipping circle to reveal or hide a view. This animation is provided in the ViewAnimationUtils class, which is available for Android 5.0 (API level 21) and higher.</string>
-    <string name="cardflipText"></string>
+    <string name="cardflipText" />
     <string name="card_back_title">Card Back Side</string>
     <string name="card_back_description">In order to create the card flip animation, you need a total of four animators. Two animators for when the front of the card animates out and to the left and in and from the left. You also need two animators for when the back of the card animates in and from the right and out and to the right.</string>
     <string name="description_image_1">Card Flip Animation</string>
@@ -33,6 +33,11 @@
     <string name="curverMotion">click to see image move in curved motion</string>
     <string name="straightMotionBtn">click to see image move in straight motion</string>
     <string name="description_zoom_touch_close">zoom image</string>
-
-
+    <string name="AutoAnimateLayoutUpdates">Auto animate layout updates</string>
+    <string name="AnimateLayoutChangesUsingTransition">Animate layout changes using a transition</string>
+    <string name="Createcustomtransitionanimation">Create a custom transition animation</string>
+    <string name="StartActivityUsingAnimation">Start an activity using an animation</string>
+    <string name="plus">plus</string>
+    <string name="text">Click to see text animate</string>
+    <string name="textForAnim">Text to show auto Animation on textView</string>
 </resources>

@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EXAMPLES_Animations">
+        <activity android:name=".AutoAnimateLayoutUpdatesActivity"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".AnimateMovementWithSpringAnimationActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".EnlargeViewWithZoomAnimationActivity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MoveViewsUsingFlingAnimationActivity"
             android:parentActivityName=".MainActivity" />
@@ -27,6 +29,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

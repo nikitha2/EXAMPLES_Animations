@@ -79,4 +79,52 @@
         android:text="@string/animateMovementWithSpringAnimation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
+
+    <Button
+        android:id="@+id/AutoAnimateLayoutUpdates"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/animateMovementWithSpringAnimation"
+        android:text="@string/AutoAnimateLayoutUpdates"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:backgroundTint="@color/purple_200"/>
+
+    <Button
+        android:id="@+id/AnimateLayoutChangesUsingTransition"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AutoAnimateLayoutUpdates"
+        android:text="@string/AnimateLayoutChangesUsingTransition"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:backgroundTint="@color/purple_200"/>
+
+    <Button
+        android:id="@+id/Createcustomtransitionanimation"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AnimateLayoutChangesUsingTransition"
+        android:text="@string/Createcustomtransitionanimation"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:backgroundTint="@color/purple_200"/>
+
+    <Button
+        android:id="@+id/StartActivityUsingAnimation"
+        android:layout_width="match_parent"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Createcustomtransitionanimation"
+        android:text="@string/StartActivityUsingAnimation"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:backgroundTint="@color/purple_200"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

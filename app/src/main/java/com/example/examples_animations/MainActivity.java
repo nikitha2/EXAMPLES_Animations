@@ -20,24 +20,25 @@ public class MainActivity extends AppCompatActivity   {
     Button moveViewWithFlingAnimation;
     Button enlargeViewWithZoomAnimation;
     Button animateMovementWithSpringAnimation;
+    Button AutoAnimateLayoutUpdates;
+    Button AnimateLayoutChangesUsingTransition;
+    Button Createcustomtransitionanimation;
+    Button StartActivityUsingAnimation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //RecyclerView gridView=findViewById(R.id.grid_details);
         moveViewWithAnimation =findViewById(R.id.MoveViewWithAnimation);
         drawbaleOrRevealHide=findViewById(R.id.drawbaleOrRevealHide);
         moveViewWithFlingAnimation=findViewById(R.id.moveViewWithFlingAnimation);
         enlargeViewWithZoomAnimation=findViewById(R.id.enlargeViewWithZoomAnimation);
         animateMovementWithSpringAnimation=findViewById(R.id.animateMovementWithSpringAnimation);
-        /*gridView.setLayoutManager(new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
-        createList();
-        gridView.setHasFixedSize(true);
-        gridAdapter = new GridAdapter(this, listOfImageUrls, this);
-        gridView.setAdapter(gridAdapter);*/
-
+        AutoAnimateLayoutUpdates=findViewById(R.id.AutoAnimateLayoutUpdates);
+        AnimateLayoutChangesUsingTransition=findViewById(R.id.AnimateLayoutChangesUsingTransition);
+        Createcustomtransitionanimation=findViewById(R.id.Createcustomtransitionanimation);
+        StartActivityUsingAnimation=findViewById(R.id.StartActivityUsingAnimation);
 
     }
 
@@ -87,6 +88,42 @@ public class MainActivity extends AppCompatActivity   {
                 Intent intent=new Intent(v.getContext(), AnimateMovementWithSpringAnimationActivity.class);
                 Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
                 startActivity(intent,bundle);
+            }
+        });
+
+        AutoAnimateLayoutUpdates.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(), AutoAnimateLayoutUpdatesActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);
+            }
+        });
+
+        AnimateLayoutChangesUsingTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent=new Intent(v.getContext(), AnimateLayoutChangesUsingTransitionActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);*/
+            }
+        });
+
+        Createcustomtransitionanimation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent=new Intent(v.getContext(), CreatecustomtransitionanimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);*/
+            }
+        });
+
+        StartActivityUsingAnimation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+                startActivity(intent,bundle);*/
             }
         });
     }

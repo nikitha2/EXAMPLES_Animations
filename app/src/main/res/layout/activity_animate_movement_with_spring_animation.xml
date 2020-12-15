@@ -6,4 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".AnimateMovementWithSpringAnimationActivity">
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imageView_SpringAnim"
+        android:layout_width="@dimen/height"
+        android:layout_height="@dimen/height"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scene2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/roundedImageViewRounded" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
