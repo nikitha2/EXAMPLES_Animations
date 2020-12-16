@@ -63,3 +63,12 @@ public class AnimateLayoutChangesUsingTransitionActivity extends AppCompatActivi
         });
     }
 }
+
+
+/*
+*  In activity Create scene for each layout-> Create  TransitionManager.xml connecting the scene with the transaction.xml
+*                               -> In transaction.xml for the targeted id , apply the transaction property.
+*
+*  In activity inflate TransitionManager and place it in container:  mTransitionManagerForScene = TransitionInflater.from(context).inflateTransitionManager(R.transition.transition_manager, sceneRoot);
+*                                     Then say which scene to goto:   mTransitionManagerForScene.transitionTo(scene3);
+* */
