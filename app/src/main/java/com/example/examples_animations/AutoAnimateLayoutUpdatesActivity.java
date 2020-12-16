@@ -43,14 +43,13 @@ public class AutoAnimateLayoutUpdatesActivity extends AppCompatActivity implemen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auto_animate_layout_updates);
-
         ((ViewGroup) findViewById(R.id.container)).getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);  // to auto animate Textview item
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         autoAnimateRecyclerView=findViewById(R.id.autoAnimateRecyclerView);
         autoAnimateAdapter=new AutoAnimateAdapter(this,new ArrayList<AutoAnimateTaskEntry>() ,this,this);
         autoAnimateRecyclerView.setAdapter(autoAnimateAdapter);
         autoAnimateRecyclerView.setLayoutManager(new LinearLayoutManager(this,RecyclerView.VERTICAL,false));
-
+        setTitle(R.string.AutoAnimateLayoutUpdates);
         setUpViewModel();
         emptyText=findViewById(R.id.EmptyText);
         textForAnimation=findViewById(R.id.text);
@@ -95,9 +94,11 @@ public class AutoAnimateLayoutUpdatesActivity extends AppCompatActivity implemen
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int it = item.getItemId();
         switch(item.getItemId()){
             case R.id.plus:viewModel.insertTask(new AutoAnimateTaskEntry()); break;
-
+            case 16908332:  finish(); //home
+            //default:finish();
         }
         return true;
     }

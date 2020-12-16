@@ -43,5 +43,12 @@
     <string name="SlideBetweenFragmentsUsingViewPager">Slide between fragments using ViewPager</string>
     <string name="SlideBetweenFragmentsUsingViewPager2">Slide between fragments using ViewPager2</string>
 
+    <string name="scene">Scene</string>
+    <string name="scene_1">1</string>
+    <string name="scene_2">2</string>
+    <string name="scene_3">3</string>
+    <string name="scene_4">4</string>
+    <string name="additional_message_in" > This message fades in </string>
+    <string name="additional_message_inout" > This message fades in out </string>
 
 </resources>

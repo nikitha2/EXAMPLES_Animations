@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity   {
         AnimateLayoutChangesUsingTransition.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent=new Intent(v.getContext(), AnimateLayoutChangesUsingTransitionActivity.class);
+                Intent intent=new Intent(v.getContext(), AnimateLayoutChangesUsingTransitionActivity.class);
                 Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
-                startActivity(intent,bundle);*/
+                startActivity(intent,bundle);
             }
         });
 
@@ -134,7 +134,7 @@ public class MainActivity extends AppCompatActivity   {
         SlideBetweenFragmentsUsingViewPager.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                /*Intent intent=new Intent(v.getContext(), SlideBetweenFragmentsUsingViewPagerActivity.class);
                 Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
                 startActivity(intent,bundle);*/
             }
@@ -143,19 +143,10 @@ public class MainActivity extends AppCompatActivity   {
         SlideBetweenFragmentsUsingViewPager2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                /*Intent intent=new Intent(v.getContext(), SlideBetweenFragmentsUsingViewPager2Activity.class);
                 Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
                 startActivity(intent,bundle);*/
             }
         });
     }
-
-
-
-   /* @Override
-    public void onListItemClick(int position) {
-        Intent intent=new Intent(this, DetailsActivity_DrawableAnim_RevealOrHideAnim.class);
-        Bundle bundle= ActivityOptions.makeSceneTransitionAnimation(this).toBundle();
-        startActivity(intent,bundle);
-    }*/
 }
