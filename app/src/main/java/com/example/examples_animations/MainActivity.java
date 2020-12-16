@@ -125,9 +125,9 @@ public class MainActivity extends AppCompatActivity   {
         StartActivityUsingAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
+                Intent intent=new Intent(v.getContext(), StartActivityUsingAnimationActivity.class);
                 Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
-                startActivity(intent,bundle);*/
+                startActivity(intent,bundle);
             }
         });
 

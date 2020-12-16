@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EXAMPLES_Animations">
-
+        <activity android:name=".StartActivityUsingAnimationActivity"></activity>
         <activity
             android:name=".AnimateLayoutChangesUsingTransitionActivity"
             android:parentActivityName=".MainActivity" />
@@ -31,14 +31,13 @@
         <activity
             android:name=".DrawableOrRevealHideActivity"
             android:parentActivityName=".MainActivity" />
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>
