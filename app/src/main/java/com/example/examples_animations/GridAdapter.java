@@ -64,12 +64,14 @@ public class GridAdapter extends RecyclerView.Adapter {
 
         ImageView imageview_item= currentView.findViewById(R.id.imageview_item);
         TextView textview_name= currentView.findViewById(R.id.textview_name);
-        textview_name.setTransitionName(currentItemAtPos.getName());
 
         String url = currentItemAtPos.getThumbnailUrl();
         Picasso.with(imageview_item.getContext()).load(url).into(imageview_item);
 
         textview_name.setText( currentItemAtPos.getName());
+
+        imageview_item.setTransitionName(currentItemAtPos.getPhotoUrl());
+        textview_name.setTransitionName(currentItemAtPos.getName());
 
     }
 
