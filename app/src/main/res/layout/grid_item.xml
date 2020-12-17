@@ -10,7 +10,6 @@
 
         <ImageView
             android:id="@+id/imageview_item"
-            android:transitionName="detail:header:image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:contentDescription="@null"
@@ -22,7 +21,6 @@
         android:id="@+id/textview_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:transitionName="detail:header:title"
         android:background="?attr/colorPrimary"
         android:maxLines="1"
         android:padding="16dp"

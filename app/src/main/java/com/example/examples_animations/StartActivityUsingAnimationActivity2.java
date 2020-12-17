@@ -31,12 +31,14 @@ public class StartActivityUsingAnimationActivity2 extends AppCompatActivity {
         setTitle(R.string.StartActivityUsingAnimation2);
         mHeaderImageView = findViewById(R.id.sharedImageResourceTo);
         mHeaderTitle = findViewById(R.id.title);
-        getWindow().setEnterTransition(null);
-// added in xml so below lines not needed. if not defined in xml can define here
-//        ViewCompat.setTransitionName(mHeaderImageView, VIEW_NAME_HEADER_IMAGE);
-//        ViewCompat.setTransitionName(mHeaderTitle, VIEW_NAME_HEADER_TITLE);
+        //getWindow().setEnterTransition(null);
+
+
 
         grid_item = (Grid_Item) getIntent().getSerializableExtra(EXTRA_PARAM);
+        ViewCompat.setTransitionName(mHeaderImageView, grid_item.getPhotoUrl());
+        ViewCompat.setTransitionName(mHeaderTitle, grid_item.getName());
+
         mHeaderTitle.setText(getString(R.string.image_header, grid_item.getName(), grid_item.getAuthor()));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             // If we're running on Lollipop and we have added a listener to the shared element

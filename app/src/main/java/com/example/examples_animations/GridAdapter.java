@@ -17,71 +17,72 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 
 public class GridAdapter extends RecyclerView.Adapter {
-        List<Grid_Item> grid_listItems;
-        Context context;
-        ListItemClickListener mClickListener;
-        ImageView clear;
+    List<Grid_Item> grid_listItems;
+    Context context;
+    ListItemClickListener mClickListener;
+    ImageView clear;
 
-        public GridAdapter(Context context, List<Grid_Item> grid_listItems, ListItemClickListener mClickListener ) {
-            this.grid_listItems =grid_listItems;
-            this.context=context;
-            this.mClickListener=mClickListener;
-        }
+    public GridAdapter(Context context, List<Grid_Item> grid_listItems, ListItemClickListener mClickListener ) {
+        this.grid_listItems =grid_listItems;
+        this.context=context;
+        this.mClickListener=mClickListener;
+    }
 
-        public interface ListItemClickListener{
-            void onListItemClick(int position);
-        }
+    public interface ListItemClickListener{
+        void onListItemClick(int position);
+    }
 
 
 
-        class CustomViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
-            View v;
-            public CustomViewHolder(@NonNull View itemView) {
-                super(itemView);
-                this.v=itemView;
-                v.setOnClickListener(this);
-            }
-
-            @Override
-            public void onClick(View v) {
-                int pos=getAdapterPosition();
-                mClickListener.onListItemClick(pos);
-            }
-        }
-
-        @NonNull
-        @Override
-        public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-            View view = layoutInflater.inflate(R.layout.grid_item, parent, false);
-            return new CustomViewHolder(view);
+    class CustomViewHolder extends RecyclerView.ViewHolder implements  View.OnClickListener {
+        View v;
+        public CustomViewHolder(@NonNull View itemView) {
+            super(itemView);
+            this.v=itemView;
+            v.setOnClickListener(this);
         }
 
         @Override
-        public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position)  {
-            View currentView = holder.itemView;
-            Grid_Item currentItemAtPos = grid_listItems.get(position);
-
-            ImageView imageview_item= currentView.findViewById(R.id.imageview_item);
-            TextView textview_name= currentView.findViewById(R.id.textview_name);
-
-            String url = currentItemAtPos.getThumbnailUrl();
-            Picasso.with(imageview_item.getContext()).load(url).into(imageview_item);
-
-            textview_name.setText( currentItemAtPos.getName());
-
+        public void onClick(View v) {
+            int pos=getAdapterPosition();
+            mClickListener.onListItemClick(pos);
         }
+    }
 
-        public void setData(List<Grid_Item> data) {
-            grid_listItems.clear();
-            grid_listItems.addAll(data);
-            notifyDataSetChanged();
-        }
+    @NonNull
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        View view = layoutInflater.inflate(R.layout.grid_item, parent, false);
+        return new CustomViewHolder(view);
+    }
 
-        @Override
-        public int getItemCount() {
-            return grid_listItems.size();
-        }
+    @Override
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position)  {
+        View currentView = holder.itemView;
+        Grid_Item currentItemAtPos = grid_listItems.get(position);
 
+        ImageView imageview_item= currentView.findViewById(R.id.imageview_item);
+        TextView textview_name= currentView.findViewById(R.id.textview_name);
+        textview_name.setTransitionName(currentItemAtPos.getName());
+
+        String url = currentItemAtPos.getThumbnailUrl();
+        Picasso.with(imageview_item.getContext()).load(url).into(imageview_item);
+
+        textview_name.setText( currentItemAtPos.getName());
 
     }
+
+    public void setData(List<Grid_Item> data) {
+        grid_listItems.clear();
+        grid_listItems.addAll(data);
+        notifyDataSetChanged();
+    }
+
+    @Override
+    public int getItemCount() {
+        return grid_listItems.size();
+    }
+
+
+}

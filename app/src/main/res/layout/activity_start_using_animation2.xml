@@ -10,7 +10,6 @@
         android:id="@+id/sharedImageResourceTo"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:transitionName="detail:header:image"
         app:layout_constraintHeight_percent="0.5"
         android:src="@drawable/scene1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,7 +21,6 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="match_parent"
-        android:transitionName="detail:header:title"
         android:layout_height="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.1"

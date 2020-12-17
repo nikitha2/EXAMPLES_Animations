@@ -63,11 +63,11 @@ public class StartActivityUsingAnimationActivity extends AppCompatActivity imple
         Intent intent = new Intent(StartActivityUsingAnimationActivity.this, StartActivityUsingAnimationActivity2.class);
         intent.putExtra(StartActivityUsingAnimationActivity2.EXTRA_PARAM_ID, list.get(position).getId());
         intent.putExtra(StartActivityUsingAnimationActivity2.EXTRA_PARAM, list.get(position));
-        Pair<View, String> p1 = Pair.create(findViewById(R.id.imageview_item), StartActivityUsingAnimationActivity2.VIEW_NAME_HEADER_IMAGE);
-        Pair<View, String> p2 = Pair.create(findViewById(R.id.textview_name), StartActivityUsingAnimationActivity2.VIEW_NAME_HEADER_TITLE);
 
+        Pair<View, String> p1 = Pair.create(findViewById(R.id.imageview_item), list.get(position).getPhotoUrl());
+        Pair<View, String> p2 = Pair.create(findViewById(R.id.textview_name), list.get(position).getName());
 
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(StartActivityUsingAnimationActivity.this, p1, p2);
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(StartActivityUsingAnimationActivity.this, p1,p2);
 //                // Now we provide a list of Pair items which contain the view we can transitioning
 //                // from, and the name of the view it is transitioning to, in the launched activity
 //                new Pair<>(findViewById(R.id.imageview_item),StartActivityUsingAnimationActivity2.VIEW_NAME_HEADER_IMAGE),
