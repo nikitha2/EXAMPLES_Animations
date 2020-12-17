@@ -12,12 +12,18 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
 
-        <!-- Customize your theme here. -->
-<!--
-        <item name="android:windowActivityTransitions">true</item>
--->
         <item name="android:windowContentTransitions">true</item>
-        <item name="android:windowExitTransition">@transition/grid_exit_transition </item>   // exit transition to define how views leave the screen
+        <!-- enable window content transitions -->
+        <item name="android:windowActivityTransitions">true</item>
+        <!-- specify enter and exit transitions -->
+         <item name="android:windowEnterTransition">@transition/slide_enter_bottom</item>
+        <item name="android:windowExitTransition">@transition/slide_exit_top</item>
+        <!--<item name="android:windowReenterTransition">@transition/slide_exit_top</item>
+        <item name="android:windowReturnTransition">@transition/slide_exit_top</item>-->
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition" > @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition" >@transition/change_image_transform</item>
+
 
     </style>
 

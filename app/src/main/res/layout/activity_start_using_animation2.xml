@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartActivityUsingAnimationActivity2">
+
+    <ImageView
+        android:id="@+id/sharedImageResourceTo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:transitionName="detail:header:image"
+        app:layout_constraintHeight_percent="0.5"
+        android:src="@drawable/scene1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/title"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:transitionName="detail:header:title"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sharedImageResourceTo"
+        app:layout_constraintBottom_toTopOf="@id/sharedImageResource_text"
+        android:background="?attr/colorPrimary"
+        android:maxLines="2"
+        android:padding="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        android:theme="@style/Theme.AppCompat"/>
+    <TextView
+        android:id="@+id/sharedImageResource_text"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/bacon_ipsum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sharedImageResourceTo" />
+</androidx.constraintlayout.widget.ConstraintLayout>

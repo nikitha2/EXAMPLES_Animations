@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity   {
     Button animateMovementWithSpringAnimation;
     Button AutoAnimateLayoutUpdates;
     Button AnimateLayoutChangesUsingTransition;
-    Button Createcustomtransitionanimation;
+    Button CreateCustomTransitionAnimation;
     Button StartActivityUsingAnimation;
     Button SlideBetweenFragmentsUsingViewPager;
     Button SlideBetweenFragmentsUsingViewPager2;
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity   {
         animateMovementWithSpringAnimation=findViewById(R.id.animateMovementWithSpringAnimation);
         AutoAnimateLayoutUpdates=findViewById(R.id.AutoAnimateLayoutUpdates);
         AnimateLayoutChangesUsingTransition=findViewById(R.id.AnimateLayoutChangesUsingTransition);
-        Createcustomtransitionanimation=findViewById(R.id.Createcustomtransitionanimation);
-        StartActivityUsingAnimation=findViewById(R.id.StartActivityUsingAnimation);
-        SlideBetweenFragmentsUsingViewPager=findViewById(R.id.StartActivityUsingAnimation);
-        SlideBetweenFragmentsUsingViewPager2=findViewById(R.id.StartActivityUsingAnimation);
+        CreateCustomTransitionAnimation =findViewById(R.id.Createcustomtransitionanimation);
+        StartActivityUsingAnimation=findViewById(R.id.StartActivityUsingAnimations);
+        SlideBetweenFragmentsUsingViewPager=findViewById(R.id.SlideBetweenFragmentsUsingViewPager);
+        SlideBetweenFragmentsUsingViewPager2=findViewById(R.id.SlideBetweenFragmentsUsingViewPager2);
 
     }
 
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity   {
             }
         });
 
-        Createcustomtransitionanimation.setOnClickListener(new View.OnClickListener() {
+        CreateCustomTransitionAnimation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 /*Intent intent=new Intent(v.getContext(), CreatecustomtransitionanimationActivity.class);
@@ -121,6 +121,7 @@ public class MainActivity extends AppCompatActivity   {
                 startActivity(intent,bundle);*/
             }
         });
+
 
         StartActivityUsingAnimation.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.examples_animations">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EXAMPLES_Animations">
-        <activity android:name=".StartActivityUsingAnimationActivity"></activity>
+        <activity
+            android:name=".StartActivityUsingAnimationActivity2"
+            android:parentActivityName=".StartActivityUsingAnimationActivity" />
+        <activity
+            android:name=".StartActivityUsingAnimationActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AnimateLayoutChangesUsingTransitionActivity"
             android:parentActivityName=".MainActivity" />
@@ -34,7 +39,6 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
