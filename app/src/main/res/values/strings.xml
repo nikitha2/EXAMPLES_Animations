@@ -44,6 +44,9 @@
     <string name="textForAnim">Text to show auto Animation on textView</string>
     <string name="SlideBetweenFragmentsUsingViewPager">Slide between fragments using ViewPager</string>
     <string name="SlideBetweenFragmentsUsingViewPager2">Slide between fragments using ViewPager2</string>
+    InstructiveMotion
+    <string name="InstructiveMotion">Instructive Motion Example</string>
+
     <string name="image_header">%1$s by %2$s</string>
     <string name="scene">Scene</string>
     <string name="scene_1">1</string>
@@ -53,6 +56,7 @@
     <string name="additional_message_in"> This message fades in </string>
     <string name="additional_message_inout"> This message fades in out </string>
     <string name="sharedImageResource">sharedImageResource</string>
+    <string name="VincentDan1992">Vincent Dan, 1992</string>
     <string name="bacon_ipsum">
         Bacon ipsum dolor sit amet venison shankle pork chop meatball tri-tip beef ribs turducken.
         Strip steak ball tip boudin shank, turducken leberkas pork chop beef ribs ham hock sausage

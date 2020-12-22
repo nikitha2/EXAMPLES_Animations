@@ -31,7 +31,7 @@ public class StartActivityUsingAnimationActivity2 extends AppCompatActivity {
         setTitle(R.string.StartActivityUsingAnimation2);
         mHeaderImageView = findViewById(R.id.sharedImageResourceTo);
         mHeaderTitle = findViewById(R.id.title);
-        //getWindow().setEnterTransition(null);
+        getWindow().setEnterTransition(null);
 
 
 

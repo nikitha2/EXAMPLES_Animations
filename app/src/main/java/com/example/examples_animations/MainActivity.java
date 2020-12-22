@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity   {
     Button StartActivityUsingAnimation;
     Button SlideBetweenFragmentsUsingViewPager;
     Button SlideBetweenFragmentsUsingViewPager2;
-
+    Button InstructiveMotion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity   {
         StartActivityUsingAnimation=findViewById(R.id.StartActivityUsingAnimations);
         SlideBetweenFragmentsUsingViewPager=findViewById(R.id.SlideBetweenFragmentsUsingViewPager);
         SlideBetweenFragmentsUsingViewPager2=findViewById(R.id.SlideBetweenFragmentsUsingViewPager2);
+
+       // InstructiveMotion=findViewById(R.id.InstructiveMotion);
 
     }
 
@@ -149,5 +151,14 @@ public class MainActivity extends AppCompatActivity   {
                 startActivity(intent,bundle);*/
             }
         });
+
+//        InstructiveMotion.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(v.getContext(), InstructiveMotionActivity.class);
+//                Bundle bundle= ActivityOptions.makeSceneTransitionAnimation((Activity) v.getContext()).toBundle();
+//                startActivity(intent,bundle);
+//            }
+//        });
     }
 }

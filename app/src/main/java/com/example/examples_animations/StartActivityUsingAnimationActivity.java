@@ -59,13 +59,13 @@ public class StartActivityUsingAnimationActivity extends AppCompatActivity imple
 
 
     @Override
-    public void onListItemClick(int position) {
+    public void onListItemClick(int position,View v) {
         Intent intent = new Intent(StartActivityUsingAnimationActivity.this, StartActivityUsingAnimationActivity2.class);
         intent.putExtra(StartActivityUsingAnimationActivity2.EXTRA_PARAM_ID, list.get(position).getId());
         intent.putExtra(StartActivityUsingAnimationActivity2.EXTRA_PARAM, list.get(position));
 
-        Pair<View, String> p1 = Pair.create(findViewById(R.id.imageview_item), list.get(position).getPhotoUrl());
-        Pair<View, String> p2 = Pair.create(findViewById(R.id.textview_name), list.get(position).getName());
+        Pair<View, String> p1 = Pair.create(v.findViewById(R.id.imageview_item), list.get(position).getPhotoUrl());
+        Pair<View, String> p2 = Pair.create(v.findViewById(R.id.textview_name), list.get(position).getName());
 
         ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(StartActivityUsingAnimationActivity.this, p1,p2);
 //                // Now we provide a list of Pair items which contain the view we can transitioning

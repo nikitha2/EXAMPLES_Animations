@@ -22,16 +22,6 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@id/MoveViewWithAnimation"/>
 
-   <!--  <androidx.recyclerview.widget.RecyclerView
-         android:id="@+id/grid_details"
-         android:layout_width="match_parent"
-         android:layout_height="0dp"
-         app:layout_constraintEnd_toEndOf="parent"
-         app:layout_constraintHeight_percent="0.2"
-         app:layout_constraintStart_toStartOf="parent"
-         app:layout_constraintTop_toBottomOf="@id/textView" />-->
-
-
     <Button
         android:id="@+id/MoveViewWithAnimation"
         android:layout_width="match_parent"
@@ -41,6 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/drawbaleOrRevealHide"
         android:text="@string/MoveViewWithAnimation"
+        app:layout_constraintBottom_toTopOf="@id/moveViewWithFlingAnimation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -53,6 +44,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MoveViewWithAnimation"
         android:text="@string/moveViewWithFlingAnimation"
+        app:layout_constraintBottom_toTopOf="@id/enlargeViewWithZoomAnimation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -65,6 +57,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/moveViewWithFlingAnimation"
         android:text="@string/enlargeViewWithZoomAnimation"
+        app:layout_constraintBottom_toTopOf="@id/animateMovementWithSpringAnimation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -77,6 +70,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enlargeViewWithZoomAnimation"
         android:text="@string/animateMovementWithSpringAnimation"
+        app:layout_constraintBottom_toTopOf="@id/AutoAnimateLayoutUpdates"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -89,6 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/animateMovementWithSpringAnimation"
         android:text="@string/AutoAnimateLayoutUpdates"
+        app:layout_constraintBottom_toTopOf="@id/AnimateLayoutChangesUsingTransition"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -101,6 +96,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AutoAnimateLayoutUpdates"
         android:text="@string/AnimateLayoutChangesUsingTransition"
+        app:layout_constraintBottom_toTopOf="@id/Createcustomtransitionanimation"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -113,6 +109,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/AnimateLayoutChangesUsingTransition"
         android:text="@string/Createcustomtransitionanimation"
+        app:layout_constraintBottom_toTopOf="@id/StartActivityUsingAnimations"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -125,6 +122,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Createcustomtransitionanimation"
         android:text="@string/StartActivityUsingAnimation1"
+        app:layout_constraintBottom_toTopOf="@id/SlideBetweenFragmentsUsingViewPager"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
@@ -136,19 +134,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/StartActivityUsingAnimations"
+        app:layout_constraintBottom_toTopOf="@id/SlideBetweenFragmentsUsingViewPager2"
         android:text="@string/SlideBetweenFragmentsUsingViewPager"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
 
     <Button
         android:id="@+id/SlideBetweenFragmentsUsingViewPager2"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_200"
+        android:text="@string/SlideBetweenFragmentsUsingViewPager2"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SlideBetweenFragmentsUsingViewPager" />
+
+    <!--<Button
+        android:id="@+id/InstructiveMotion"
         android:layout_width="match_parent"
         android:textColor="@color/black"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SlideBetweenFragmentsUsingViewPager"
-        android:text="@string/SlideBetweenFragmentsUsingViewPager2"
+        app:layout_constraintTop_toBottomOf="@+id/SlideBetweenFragmentsUsingViewPager2"
+        android:text="@string/InstructiveMotion"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
         android:backgroundTint="@color/purple_200"/>
+-->
 </androidx.constraintlayout.widget.ConstraintLayout>

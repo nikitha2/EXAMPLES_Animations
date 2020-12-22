@@ -29,7 +29,7 @@ public class GridAdapter extends RecyclerView.Adapter {
     }
 
     public interface ListItemClickListener{
-        void onListItemClick(int position);
+        void onListItemClick(int position,View v);
     }
 
 
@@ -45,7 +45,7 @@ public class GridAdapter extends RecyclerView.Adapter {
         @Override
         public void onClick(View v) {
             int pos=getAdapterPosition();
-            mClickListener.onListItemClick(pos);
+            mClickListener.onListItemClick(pos,v);
         }
     }
 
